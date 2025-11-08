@@ -11,7 +11,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="./images/KEL1.jpg" />
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="./images/KEL1.jpg" />
+    <link rel="apple-touch-icon" href="./images/KEL1.jpg" />
   </head>
 
   <body>
@@ -120,6 +122,7 @@
         { label: "Skills", href: "#skills" },
         { label: "Education", href: "#education" },
         { label: "Experience", href: "#experience" },
+        { label: "Contacts", href: "#contacts" },
       ];
 
       const App = () => {
@@ -432,7 +435,7 @@
 
           e(
             "footer",
-            { className: "footer glass-panel" },
+            { id: "contacts", className: "footer glass-panel" },
             e(
               "div",
               { className: "footer-content" },

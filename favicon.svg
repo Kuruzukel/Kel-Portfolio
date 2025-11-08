@@ -1,17 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
   <defs>
-    <clipPath id="circleMask">
-      <circle cx="32" cy="32" r="30" />
+    <clipPath id="circle">
+      <circle cx="16" cy="16" r="14"/>
     </clipPath>
   </defs>
-  <circle cx="32" cy="32" r="32" fill="#ffffff" />
-  <image
-    clip-path="url(#circleMask)"
-    href="./images/KEL1.jpg"
-    width="64"
-    height="64"
-    preserveAspectRatio="xMidYMid slice"
-  />
-  <circle cx="32" cy="32" r="30" fill="none" stroke="#ffffff" stroke-width="2" />
+  <circle cx="16" cy="16" r="16" fill="#f0f0f0"/>
+  <image href="./images/KEL1.jpg" x="2" y="2" width="28" height="28" clip-path="url(#circle)" preserveAspectRatio="xMidYMid slice"/>
+  <circle cx="16" cy="16" r="14" fill="none" stroke="#ddd" stroke-width="1"/>
 </svg>
 
