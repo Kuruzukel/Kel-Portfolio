@@ -1,393 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michael D. Cruz | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Michael D. Cruz | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
-</head>
+  <body>
+    <div id="root"></div>
 
-<body>
-  <div id="root"></div>
+    <script
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+    <script>
+      const { useState, useEffect, createElement: e } = React;
 
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-  <script>
-    const { useState, useEffect, createElement: e } = React;
+      const education = [
+        {
+          level: "Bachelor of Science in Information System",
+          school: "Exact Colleges of Asia",
+          details: "College Undergraduate",
+          years: "",
+        },
+        {
+          level: "Senior High School",
+          school: "Camba National High School",
+          details: "",
+          years: "2019 – 2021",
+        },
+        {
+          level: "Junior High School",
+          school: "Camba National High School",
+          details: "",
+          years: "2013 – 2018",
+        },
+        {
+          level: "Elementary",
+          school: "Arayat Holy Child Educational Foundation Inc.",
+          details: "",
+          years: "2008 – 2013",
+        },
+      ];
 
-    const education = [
-      {
-        level: "Bachelor of Science in Information System",
-        school: "Exact Colleges of Asia",
-        details: "College Undergraduate",
-        years: "",
-      },
-      {
-        level: "Senior High School",
-        school: "Camba National High School",
-        details: "",
-        years: "2019 – 2021",
-      },
-      {
-        level: "Junior High School",
-        school: "Camba National High School",
-        details: "",
-        years: "2013 – 2018",
-      },
-      {
-        level: "Elementary",
-        school: "Arayat Holy Child Educational Foundation Inc.",
-        details: "",
-        years: "2008 – 2013",
-      },
-    ];
+      const experiences = [
+        {
+          title: "Layout Editor & Office Assistant",
+          company: "Creative Aesthetic Academy & Technical Education Inc.",
+          location: "Arayat, Pampanga",
+          years: "2025 – Present",
+          bullets: [
+            "Designed and structured layouts for digital and print materials while ensuring brand consistency and quality.",
+            "Prepared and organized office documents, reports, and presentations using Microsoft Office tools.",
+            "Assisted in administrative tasks and documentation to support daily operations and project coordination.",
+          ],
+        },
+        {
+          title: "Layout Editor & Office Assistant",
+          company: "Labellash & Brows",
+          location: "Arayat, Pampanga",
+          years: "2023 – 2024",
+          bullets: [
+            "Created and edited marketing layouts and printed materials for brand promotions.",
+            "Managed paperwork and office documentation with accuracy and attention to detail.",
+            "Supported administrative duties and contributed to the smooth execution of daily office functions.",
+          ],
+        },
+      ];
 
-    const experiences = [
-      {
-        title: "Layout Editor & Office Assistant",
-        company: "Creative Aesthetic Academy & Technical Education Inc.",
-        location: "Arayat, Pampanga",
-        years: "2025 – Present",
-        bullets: [
-          "Designed and structured layouts for digital and print materials while ensuring brand consistency and quality.",
-          "Prepared and organized office documents, reports, and presentations using Microsoft Office tools.",
-          "Assisted in administrative tasks and documentation to support daily operations and project coordination.",
-        ],
-      },
-      {
-        title: "Layout Editor & Office Assistant",
-        company: "Labellash & Brows",
-        location: "Arayat, Pampanga",
-        years: "2023 – 2024",
-        bullets: [
-          "Created and edited marketing layouts and printed materials for brand promotions.",
-          "Managed paperwork and office documentation with accuracy and attention to detail.",
-          "Supported administrative duties and contributed to the smooth execution of daily office functions.",
-        ],
-      },
-    ];
+      const skills = [
+        {
+          name: "Web Development",
+          details: [
+            "Develop responsive and dynamic web applications using HTML, CSS, JavaScript, PHP, Laravel, React.js, jQuery, MongoDB, and MySQL.",
+            "Integrate frontend and backend systems for smooth and efficient functionality.",
+            "Apply best practices in code optimization, debugging, and version control.",
+          ],
+        },
+        {
+          name: "Layout & UI Design",
+          details: [
+            "Design clean and user-friendly interfaces that enhance overall usability.",
+            "Ensure layouts follow modern design trends and accessibility standards.",
+            "Utilize design frameworks and tools to improve consistency and aesthetics.",
+          ],
+        },
+        {
+          name: "Video Editing",
+          details: [
+            "Edit and produce multimedia content for digital platforms and presentations.",
+            "Enhance storytelling through transitions, effects, and sound synchronization.",
+            "Optimize videos for various formats and social media use.",
+          ],
+        },
+        {
+          name: "Office Productivity",
+          details: [
+            "Prepare and organize professional documents, reports, and presentations using Microsoft Office.",
+            "Maintain accuracy, formatting consistency, and data organization.",
+            "Support administrative and documentation tasks efficiently.",
+          ],
+        },
+      ];
 
-    const skills = [
-      {
-        name: "Web Development",
-        details: [
-          "Develop responsive and dynamic web applications using HTML, CSS, JavaScript, PHP, Laravel, React.js, jQuery, MongoDB, and MySQL.",
-          "Integrate frontend and backend systems for smooth and efficient functionality.",
-          "Apply best practices in code optimization, debugging, and version control.",
-        ],
-      },
-      {
-        name: "Layout & UI Design",
-        details: [
-          "Design clean and user-friendly interfaces that enhance overall usability.",
-          "Ensure layouts follow modern design trends and accessibility standards.",
-          "Utilize design frameworks and tools to improve consistency and aesthetics.",
-        ],
-      },
-      {
-        name: "Video Editing",
-        details: [
-          "Edit and produce multimedia content for digital platforms and presentations.",
-          "Enhance storytelling through transitions, effects, and sound synchronization.",
-          "Optimize videos for various formats and social media use.",
-        ],
-      },
-      {
-        name: "Office Productivity",
-        details: [
-          "Prepare and organize professional documents, reports, and presentations using Microsoft Office.",
-          "Maintain accuracy, formatting consistency, and data organization.",
-          "Support administrative and documentation tasks efficiently.",
-        ],
-      },
-    ];
+      const navLinks = [
+        { label: "About", href: "#about" },
+        { label: "Skills", href: "#skills" },
+        { label: "Education", href: "#education" },
+        { label: "Experience", href: "#experience" },
+      ];
 
-    const navLinks = [
-      { label: "About", href: "#about" },
-      { label: "Skills", href: "#skills" },
-      { label: "Education", href: "#education" },
-      { label: "Experience", href: "#experience" },
-    ];
+      const App = () => {
+        const [theme, setTheme] = useState("light");
+        const [menuOpen, setMenuOpen] = useState(false);
+        const [topbarVisible, setTopbarVisible] = useState(true);
 
-    const App = () => {
-      const [theme, setTheme] = useState("light");
-      const [menuOpen, setMenuOpen] = useState(false);
-      const [topbarVisible, setTopbarVisible] = useState(true);
+        useEffect(() => {
+          document.body.dataset.theme = theme;
+        }, [theme]);
 
-      useEffect(() => {
-        document.body.dataset.theme = theme;
-      }, [theme]);
+        useEffect(() => {
+          const closeMenuOnResize = () => {
+            if (window.innerWidth > 768) {
+              setMenuOpen(false);
+            }
+          };
 
-      useEffect(() => {
-        const closeMenuOnResize = () => {
-          if (window.innerWidth > 768) {
-            setMenuOpen(false);
-          }
+          window.addEventListener("resize", closeMenuOnResize);
+          return () => window.removeEventListener("resize", closeMenuOnResize);
+        }, []);
+
+        useEffect(() => {
+          let lastScrollY = window.scrollY;
+          let ticking = false;
+
+          const handleScroll = () => {
+            if (!ticking) {
+              requestAnimationFrame(() => {
+                const currentScrollY = window.scrollY;
+
+                // Show topbar when scrolling up or at the top
+                if (currentScrollY < lastScrollY || currentScrollY < 100) {
+                  setTopbarVisible(true);
+                }
+                // Hide topbar when scrolling down (after 100px)
+                else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                  setTopbarVisible(false);
+                  setMenuOpen(false); // Close mobile menu when hiding topbar
+                }
+
+                lastScrollY = currentScrollY;
+                ticking = false;
+              });
+              ticking = true;
+            }
+          };
+
+          window.addEventListener("scroll", handleScroll, { passive: true });
+          return () => window.removeEventListener("scroll", handleScroll);
+        }, []);
+
+        const toggleTheme = () => {
+          setTheme((prev) => (prev === "dark" ? "light" : "dark"));
         };
 
-        window.addEventListener("resize", closeMenuOnResize);
-        return () => window.removeEventListener("resize", closeMenuOnResize);
-      }, []);
+        return e(
+          "div",
+          { className: `page${menuOpen ? " nav-open" : ""}` },
+          e("div", { className: "grid-overlay" }),
+          e("div", { className: "orb orb-1" }),
+          e("div", { className: "orb orb-2" }),
+          e("div", { className: "orb orb-3" }),
+          e(
+            "header",
+            {
+              className: `topbar glass-panel${topbarVisible ? "" : " hidden"}`,
+            },
+            e("div", { className: "portfolio-title" }, "Kel's Portfolio"),
+            e(
+              "nav",
+              { className: "nav-desktop" },
+              ...navLinks.map((link) =>
+                e(
+                  "a",
+                  {
+                    key: link.label,
+                    href: link.href,
+                    onClick: (e) => {
+                      e.preventDefault();
+                      const target = document.querySelector(link.href);
+                      if (target) {
+                        target.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                      }
+                    },
+                  },
+                  link.label
+                )
+              )
+            ),
+            e(
+              "div",
+              { className: "topbar-actions" },
+              e(
+                "button",
+                {
+                  className: "theme-toggle",
+                  type: "button",
+                  onClick: toggleTheme,
+                  "aria-label": "Toggle color mode",
+                },
+                e(
+                  "svg",
+                  {
+                    className: "icon icon-light",
+                    width: "22",
+                    height: "22",
+                    viewBox: "0 0 24 24",
+                    "aria-hidden": "true",
+                  },
+                  e("circle", {
+                    cx: "12",
+                    cy: "12",
+                    r: "4",
+                    fill: "currentColor",
+                  }),
+                  e("path", {
+                    d: "M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41",
+                    stroke: "currentColor",
+                    strokeWidth: "2",
+                    strokeLinecap: "round",
+                  })
+                ),
+                e(
+                  "svg",
+                  {
+                    className: "icon icon-dark",
+                    width: "22",
+                    height: "22",
+                    viewBox: "0 0 24 24",
+                    "aria-hidden": "true",
+                  },
+                  e("path", {
+                    d: "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z",
+                    fill: "currentColor",
+                  })
+                ),
+                e("span", { className: "sr-only" }, "Toggle color mode")
+              ),
+              e(
+                "button",
+                {
+                  className: `hamburger${menuOpen ? " active" : ""}`,
+                  type: "button",
+                  "aria-label": "Toggle navigation",
+                  "aria-expanded": menuOpen,
+                  onClick: () => setMenuOpen((open) => !open),
+                },
+                e("span"),
+                e("span"),
+                e("span")
+              )
+            )
+          ),
 
-      useEffect(() => {
-        let lastScrollY = window.scrollY;
-        let ticking = false;
+          e(
+            "nav",
+            { className: `nav${menuOpen ? " open" : ""}` },
+            ...navLinks.map((link) =>
+              e(
+                "a",
+                {
+                  key: link.label,
+                  href: link.href,
+                  onClick: (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(link.href);
+                    if (target) {
+                      target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    }
+                    setMenuOpen(false);
+                  },
+                },
+                link.label
+              )
+            )
+          ),
 
-        const handleScroll = () => {
-          if (!ticking) {
-            requestAnimationFrame(() => {
-              const currentScrollY = window.scrollY;
+          e(
+            "main",
+            { className: "shell" },
+            e(
+              "section",
+              { id: "about", className: "hero glass-panel" },
+              e(
+                "div",
+                { className: "avatar-frame" },
+                e("span", { className: "pulse" }),
+                e("img", { src: "./images/kel.jpg", alt: "Michael D. Cruz" })
+              ),
+              e(
+                "div",
+                { className: "hero-text" },
+                e("h1", null, "Michael D. Cruz"),
+                e(
+                  "p",
+                  { className: "summary" },
+                  "Motivated and hardworking individual with skills in Web Development, Layout and UI Design, Video Editing, and Office Productivity. Dedicated to producing high-quality work through teamwork, effective problem solving, and continuous learning. Committed to improving skills and contributing to the success of every project."
+                )
+              )
+            ),
 
-              // Show topbar when scrolling up or at the top
-              if (currentScrollY < lastScrollY || currentScrollY < 100) {
-                setTopbarVisible(true);
-              }
-              // Hide topbar when scrolling down (after 100px)
-              else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                setTopbarVisible(false);
-                setMenuOpen(false); // Close mobile menu when hiding topbar
-              }
+            e(
+              "section",
+              { id: "skills", className: "glass-panel spotlight" },
+              e(
+                "div",
+                { className: "section-title" },
+                e("span", { className: "dot" }),
+                e("h2", null, "Technical Skills")
+              ),
+              e(
+                "div",
+                { className: "cards-grid" },
+                ...skills.map((skill) =>
+                  e(
+                    "article",
+                    { key: skill.name, className: "skill-card" },
+                    e("h3", null, skill.name),
+                    e(
+                      "ul",
+                      null,
+                      ...skill.details.map((item, index) =>
+                        e("li", { key: index }, item)
+                      )
+                    )
+                  )
+                )
+              )
+            ),
 
-              lastScrollY = currentScrollY;
-              ticking = false;
-            });
-            ticking = true;
-          }
-        };
+            e(
+              "section",
+              { id: "education", className: "glass-panel" },
+              e(
+                "div",
+                { className: "section-title" },
+                e("span", { className: "dot" }),
+                e("h2", null, "Education")
+              ),
+              e(
+                "div",
+                { className: "timeline" },
+                ...education.map((item, index) =>
+                  e(
+                    "div",
+                    { key: index, className: "timeline-item" },
+                    e("div", { className: "timeline-marker" }),
+                    e(
+                      "div",
+                      { className: "timeline-content" },
+                      e("h3", null, item.level),
+                      item.school &&
+                        e("p", { className: "institution" }, item.school),
+                      item.details &&
+                        item.details !== "" &&
+                        e("p", { className: "details" }, item.details),
+                      item.years && e("p", { className: "years" }, item.years)
+                    )
+                  )
+                )
+              )
+            ),
 
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => window.removeEventListener("scroll", handleScroll);
-      }, []);
+            e(
+              "section",
+              { id: "experience", className: "glass-panel" },
+              e(
+                "div",
+                { className: "section-title" },
+                e("span", { className: "dot" }),
+                e("h2", null, "Work Experience")
+              ),
+              e(
+                "div",
+                { className: "experience-list" },
+                ...experiences.map((role) =>
+                  e(
+                    "article",
+                    { key: role.company, className: "experience-card" },
+                    e(
+                      "header",
+                      null,
+                      e("h3", null, role.title),
+                      e(
+                        "p",
+                        { className: "meta" },
+                        `${role.company} — ${role.location}`
+                      ),
+                      e("p", { className: "years" }, role.years)
+                    ),
+                    e(
+                      "ul",
+                      null,
+                      ...role.bullets.map((item, index) =>
+                        e("li", { key: index }, item)
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          ),
 
-      const toggleTheme = () => {
-        setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+          e(
+            "footer",
+            { className: "footer glass-panel" },
+            e(
+              "div",
+              { className: "footer-content" },
+              e(
+                "div",
+                { className: "footer-info" },
+                e(
+                  "div",
+                  { className: "footer-contact" },
+                  e(
+                    "span",
+                    null,
+                    e(
+                      "svg",
+                      {
+                        width: "16",
+                        height: "16",
+                        viewBox: "0 0 24 24",
+                        fill: "currentColor",
+                        style: {
+                          marginRight: "0.5rem",
+                          verticalAlign: "middle",
+                        },
+                      },
+                      e("path", {
+                        d: "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z",
+                      })
+                    ),
+                    "mikasaackerman.jme@gmail.com"
+                  ),
+                  e(
+                    "span",
+                    null,
+                    e(
+                      "svg",
+                      {
+                        width: "16",
+                        height: "16",
+                        viewBox: "0 0 24 24",
+                        fill: "currentColor",
+                        style: {
+                          marginRight: "0.5rem",
+                          verticalAlign: "middle",
+                        },
+                      },
+                      e("path", {
+                        d: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z",
+                      })
+                    ),
+                    "Suclayin, Arayat, Pampanga"
+                  )
+                ),
+                e(
+                  "div",
+                  { className: "footer-copyright" },
+                  e(
+                    "p",
+                    null,
+                    `© ${new Date().getFullYear()} Michael D. Cruz. All Rights Reserved.`
+                  ),
+                  "Let's collaborate"
+                )
+              )
+            )
+          )
+        );
       };
 
-      return e('div', { className: `page${menuOpen ? " nav-open" : ""}` },
-        e('div', { className: "grid-overlay" }),
-        e('div', { className: "orb orb-1" }),
-        e('div', { className: "orb orb-2" }),
-        e('div', { className: "orb orb-3" }),
-        e('header', { className: `topbar glass-panel${topbarVisible ? "" : " hidden"}` },
-          e('div', { className: "portfolio-title" }, "Kel's Portfolio"),
-          e('nav', { className: "nav-desktop" },
-            ...navLinks.map((link) =>
-              e('a', {
-                key: link.label,
-                href: link.href,
-                onClick: (e) => {
-                  e.preventDefault();
-                  const target = document.querySelector(link.href);
-                  if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }
-              }, link.label)
-            )
-          ),
-          e('div', { className: "topbar-actions" },
-            e('button', {
-              className: "theme-toggle",
-              type: "button",
-              onClick: toggleTheme,
-              'aria-label': "Toggle color mode"
-            },
-              e('svg', {
-                className: "icon icon-light",
-                width: "22",
-                height: "22",
-                viewBox: "0 0 24 24",
-                'aria-hidden': "true"
-              },
-                e('circle', {
-                  cx: "12",
-                  cy: "12",
-                  r: "4",
-                  fill: "currentColor"
-                }),
-                e('path', {
-                  d: "M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41",
-                  stroke: "currentColor",
-                  strokeWidth: "2",
-                  strokeLinecap: "round"
-                })
-              ),
-              e('svg', {
-                className: "icon icon-dark",
-                width: "22",
-                height: "22",
-                viewBox: "0 0 24 24",
-                'aria-hidden': "true"
-              },
-                e('path', {
-                  d: "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z",
-                  fill: "currentColor"
-                })
-              ),
-              e('span', { className: "sr-only" }, "Toggle color mode")
-            ),
-            e('button', {
-              className: `hamburger${menuOpen ? " active" : ""}`,
-              type: "button",
-              'aria-label': "Toggle navigation",
-              'aria-expanded': menuOpen,
-              onClick: () => setMenuOpen((open) => !open)
-            },
-              e('span'),
-              e('span'),
-              e('span')
-            )
-          )
-        ),
-
-        e('nav', { className: `nav${menuOpen ? " open" : ""}` },
-          ...navLinks.map((link) =>
-            e('a', {
-              key: link.label,
-              href: link.href,
-              onClick: (e) => {
-                e.preventDefault();
-                const target = document.querySelector(link.href);
-                if (target) {
-                  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-                setMenuOpen(false);
-              }
-            }, link.label)
-          )
-        ),
-
-        e('main', { className: "shell" },
-          e('section', { id: "about", className: "hero glass-panel" },
-            e('div', { className: "avatar-frame" },
-              e('span', { className: "pulse" }),
-              e('img', { src: "./images/kel.jpg", alt: "Michael D. Cruz" })
-            ),
-            e('div', { className: "hero-text" },
-              e('h1', null, "Michael D. Cruz"),
-              e('p', { className: "summary" },
-                "Motivated and hardworking individual with skills in Web Development, Layout and UI Design, Video Editing, and Office Productivity. Dedicated to producing high-quality work through teamwork, effective problem solving, and continuous learning. Committed to improving skills and contributing to the success of every project."
-              ),
-
-            )
-          ),
-
-          e('section', { id: "skills", className: "glass-panel spotlight" },
-            e('div', { className: "section-title" },
-              e('span', { className: "dot" }),
-              e('h2', null, "Technical Skills")
-            ),
-            e('div', { className: "cards-grid" },
-              ...skills.map((skill) =>
-                e('article', { key: skill.name, className: "skill-card" },
-                  e('h3', null, skill.name),
-                  e('ul', null,
-                    ...skill.details.map((item, index) =>
-                      e('li', { key: index }, item)
-                    )
-                  )
-                )
-              )
-            )
-          ),
-
-          e('section', { id: "education", className: "glass-panel" },
-            e('div', { className: "section-title" },
-              e('span', { className: "dot" }),
-              e('h2', null, "Education")
-            ),
-            e('div', { className: "timeline" },
-              ...education.map((item, index) =>
-                e('div', { key: index, className: "timeline-item" },
-                  e('div', { className: "timeline-marker" }),
-                  e('div', { className: "timeline-content" },
-                    e('h3', null, item.level),
-                    item.school && e('p', { className: "institution" }, item.school),
-                    item.details && item.details !== "" && e('p', { className: "details" }, item.details),
-                    item.years && e('p', { className: "years" }, item.years)
-                  )
-                )
-              )
-            )
-          ),
-
-          e('section', { id: "experience", className: "glass-panel" },
-            e('div', { className: "section-title" },
-              e('span', { className: "dot" }),
-              e('h2', null, "Work Experience")
-            ),
-            e('div', { className: "experience-list" },
-              ...experiences.map((role) =>
-                e('article', { key: role.company, className: "experience-card" },
-                  e('header', null,
-                    e('h3', null, role.title),
-                    e('p', { className: "meta" }, `${role.company} — ${role.location}`),
-                    e('p', { className: "years" }, role.years)
-                  ),
-                  e('ul', null,
-                    ...role.bullets.map((item, index) =>
-                      e('li', { key: index }, item)
-                    )
-                  )
-                )
-              )
-            )
-          )
-        ),
-
-        e('footer', { className: "footer glass-panel" },
-          e('div', { className: "footer-content" },
-            e('div', { className: "footer-info" },
-              e('div', { className: "footer-contact" },
-                e('span', null,
-                  e('svg', {
-                    width: "16",
-                    height: "16",
-                    viewBox: "0 0 24 24",
-                    fill: "currentColor",
-                    style: { marginRight: "0.5rem", verticalAlign: "middle" }
-                  },
-                    e('path', {
-                      d: "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-                    })
-                  ),
-                  "Email: mikasaackerman.jme@gmail.com"
-                ),
-                e('span', null,
-                  e('svg', {
-                    width: "16",
-                    height: "16",
-                    viewBox: "0 0 24 24",
-                    fill: "currentColor",
-                    style: { marginRight: "0.5rem", verticalAlign: "middle" }
-                  },
-                    e('path', {
-                      d: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-                    })
-                  ),
-                  "Address: Suclayin, Arayat, Pampanga"
-                )
-              ),
-              e('div', { className: "footer-copyright" },
-                e('p', null, `© ${new Date().getFullYear()} Michael D. Cruz. All Rights Reserved.`),
-                "Let's collaborate"
-              )
-            )
-          )
-        )
-      );
-    };
-
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(e(App));
-  </script>
-</body>
-
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(e(App));
+    </script>
+  </body>
 </html>

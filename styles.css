@@ -1,14 +1,20 @@
 :root {
   font-size: 16px;
-  --bg-gradient: radial-gradient(circle at 10% 20%,
+  --bg-gradient: radial-gradient(
+      circle at 10% 20%,
       rgba(255, 255, 255, 0.04),
-      transparent 55%),
-    radial-gradient(circle at 90% 15%,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 90% 15%,
       rgba(255, 255, 255, 0.06),
-      transparent 60%),
-    radial-gradient(circle at 50% 80%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 50% 80%,
       rgba(255, 255, 255, 0.03),
-      transparent 70%),
+      transparent 70%
+    ),
     #050505;
   --surface: rgba(255, 255, 255, 0.06);
   --surface-strong: rgba(255, 255, 255, 0.18);
@@ -21,9 +27,11 @@
 }
 
 body[data-theme="light"] {
-  --bg-gradient: radial-gradient(circle at 10% 15%,
+  --bg-gradient: radial-gradient(
+      circle at 10% 15%,
       rgba(0, 0, 0, 0.04),
-      transparent 55%),
+      transparent 55%
+    ),
     radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.05), transparent 65%),
     #f7f7f7;
   --surface: rgba(0, 0, 0, 0.08);
@@ -53,9 +61,11 @@ body[data-theme="light"] {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.15),
-      rgba(255, 255, 255, 0.08));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.08)
+  );
   border-radius: 6px;
   border: 2px solid transparent;
   background-clip: padding-box;
@@ -63,15 +73,19 @@ body[data-theme="light"] {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.25),
-      rgba(255, 255, 255, 0.15));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.15)
+  );
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.35),
-      rgba(255, 255, 255, 0.25));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.25)
+  );
 }
 
 ::-webkit-scrollbar-corner {
@@ -84,21 +98,27 @@ body[data-theme="light"] ::-webkit-scrollbar-track {
 }
 
 body[data-theme="light"] ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.15),
-      rgba(255, 255, 255, 0.08));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.08)
+  );
 }
 
 body[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.25),
-      rgba(255, 255, 255, 0.15));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.15)
+  );
 }
 
 body[data-theme="light"] ::-webkit-scrollbar-thumb:active {
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.35),
-      rgba(255, 255, 255, 0.25));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.25)
+  );
 }
 
 body[data-theme="light"] ::-webkit-scrollbar-corner {
@@ -145,8 +165,6 @@ a {
   min-height: 100vh;
 }
 
-
-
 .page.nav-open .shell,
 .page.nav-open .footer,
 .page.nav-open .grid-overlay,
@@ -190,9 +208,11 @@ a {
   opacity: 0.4;
   z-index: 0;
   filter: blur(2px);
-  background: radial-gradient(circle,
-      rgba(255, 255, 255, 0.35),
-      transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.35),
+    transparent 70%
+  );
 }
 
 .orb-1 {
@@ -214,7 +234,6 @@ a {
 }
 
 @keyframes float {
-
   0%,
   100% {
     transform: translate3d(0, 0, 0) scale(1);
@@ -241,9 +260,11 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg,
-      rgba(255, 255, 255, 0.14),
-      transparent 60%);
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.14),
+    transparent 60%
+  );
   mix-blend-mode: screen;
   opacity: 0.6;
   pointer-events: none;
@@ -344,7 +365,7 @@ a {
   min-width: fit-content;
 }
 
-.topbar-actions>* {
+.topbar-actions > * {
   flex-shrink: 0;
 }
 
@@ -501,15 +522,16 @@ body[data-theme="light"] .theme-toggle .icon-dark {
   position: absolute;
   inset: -8%;
   border-radius: 50%;
-  background: radial-gradient(circle,
-      rgba(255, 255, 255, 0.25),
-      transparent 65%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25),
+    transparent 65%
+  );
   animation: pulse 4s ease-in-out infinite;
   z-index: -1;
 }
 
 @keyframes pulse {
-
   0%,
   100% {
     transform: scale(0.95);
@@ -898,7 +920,6 @@ body[data-theme="light"] .experience-card {
     display: none;
   }
 
-
   .nav {
     display: flex !important;
     position: fixed !important;
@@ -907,7 +928,11 @@ body[data-theme="light"] .experience-card {
     transform: translateX(-50%) !important;
     width: calc(100% - clamp(3rem, 8vw, 7rem)) !important;
     max-width: 1240px !important;
-    background: linear-gradient(135deg, var(--surface-strong), transparent) !important;
+    background: linear-gradient(
+      135deg,
+      var(--surface-strong),
+      transparent
+    ) !important;
     border: 1px solid var(--border) !important;
     border-radius: 28px !important;
     backdrop-filter: blur(22px) !important;
@@ -916,7 +941,9 @@ body[data-theme="light"] .experience-card {
     align-items: flex-start !important;
     gap: 0 !important;
     padding: clamp(1.75rem, 3vw, 2.5rem) !important;
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
     opacity: 0 !important;
     visibility: hidden !important;
     transform: translateX(-50%) translateY(-10px) !important;
@@ -924,8 +951,6 @@ body[data-theme="light"] .experience-card {
     flex: none !important;
     pointer-events: auto !important;
   }
-
-
 
   .nav.open {
     opacity: 1 !important;
