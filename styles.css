@@ -1316,3 +1316,120 @@ body[data-theme="light"] .experience-card {
     overflow-x: hidden;
   }
 }
+
+/* Certificates Section Styles */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.certificate-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 40px 100px var(--shadow-color);
+}
+
+body[data-theme="light"] .certificate-item {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.certificate-item h2 {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+
+.certificate-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.certificate-image:hover {
+  transform: scale(1.02);
+}
+
+
+/* Responsive adjustments for certificates */
+@media (max-width: 900px) {
+  .certificates-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .certificates-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: clamp(0.75rem, 2vw, 1rem);
+  }
+
+  .certificate-item {
+    padding: clamp(1rem, 3vw, 1.25rem);
+    border-radius: 16px;
+    gap: 0.5rem;
+  }
+
+  .certificate-item h2 {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+  }
+
+  .certificate-image {
+    border-radius: 12px;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .certificate-item {
+    padding: 1rem;
+    border-radius: 14px;
+    gap: 0.5rem;
+  }
+
+  .certificate-item h2 {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  .certificate-image {
+    border-radius: 10px;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .certificate-item {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+
+  .certificate-item h2 {
+    font-size: 0.9rem;
+  }
+
+  .certificate-image {
+    border-radius: 8px;
+  }
+
+}
