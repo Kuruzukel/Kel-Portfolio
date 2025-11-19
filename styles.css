@@ -549,6 +549,13 @@ body[data-theme="light"] .theme-toggle .icon-dark {
   gap: 1.2rem;
 }
 
+.hero-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .hero-text .tag {
   font-size: 0.85rem;
   letter-spacing: 0.24em;
@@ -560,6 +567,47 @@ body[data-theme="light"] .theme-toggle .icon-dark {
   font-size: clamp(2.2rem, 4.6vw, 3.6rem);
   font-weight: 600;
   letter-spacing: 0.02em;
+}
+
+.view-cv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, var(--surface-strong), transparent 75%);
+  color: var(--text-primary);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.view-cv:hover,
+.view-cv:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25),
+    transparent 65%
+  );
+}
+
+body:not([data-theme="light"]) .view-cv:hover,
+body:not([data-theme="light"]) .view-cv:focus-visible {
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.35),
+    0 0 22px rgba(255, 255, 255, 0.45);
+  background: rgba(0, 0, 0, 0.9);
+}
+
+body[data-theme="light"] .view-cv:hover,
+body[data-theme="light"] .view-cv:focus-visible {
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.35), 0 0 22px rgba(0, 0, 0, 0.35);
 }
 
 .hero-text .summary {
@@ -818,6 +866,7 @@ body[data-theme="light"] .experience-card {
 }
 
 .footer-contact a {
+  display: inline-flex;
   color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.25s ease;
@@ -838,9 +887,7 @@ body[data-theme="light"] .experience-card {
 }
 
 .footer a {
-  font-weight: 500;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .footer a:hover,
@@ -856,6 +903,21 @@ body[data-theme="light"] .experience-card {
 
   .hero-text {
     align-items: center;
+  }
+
+  .hero-text h1 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-heading {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .hero-heading .view-cv {
+    margin-top: 0.25rem;
   }
 
   .hero-text .summary {
@@ -1338,7 +1400,6 @@ body[data-theme="light"] .experience-card {
 
 .certificate-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 40px 100px var(--shadow-color);
 }
 
 body[data-theme="light"] .certificate-item {
@@ -1357,14 +1418,12 @@ body[data-theme="light"] .certificate-item {
   width: 100%;
   height: auto;
   border-radius: 16px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
 .certificate-image:hover {
   transform: scale(1.02);
 }
-
 
 /* Responsive adjustments for certificates */
 @media (max-width: 900px) {
@@ -1392,7 +1451,6 @@ body[data-theme="light"] .certificate-item {
   .certificate-image {
     border-radius: 12px;
   }
-
 }
 
 @media (max-width: 520px) {
@@ -1415,7 +1473,6 @@ body[data-theme="light"] .certificate-item {
   .certificate-image {
     border-radius: 10px;
   }
-
 }
 
 @media (max-width: 320px) {
@@ -1431,5 +1488,4 @@ body[data-theme="light"] .certificate-item {
   .certificate-image {
     border-radius: 8px;
   }
-
 }
