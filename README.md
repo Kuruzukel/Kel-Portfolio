@@ -1,18 +1,29 @@
-# Michael D. Cruz - Portfolio
-
 <div align="center">
-  <img src="./images/KEL1.jpg" alt="Michael D. Cruz" width="200" style="border-radius: 50%;">
+  <img src="./images/KEL1.jpg" alt="Michael D. Cruz" width="150" style="border-radius: 50%;">
   
-  <p><strong>Web Developer | Layout & UI Designer | Office Productivity Specialist</strong></p>
+  <h1>Michael D. Cruz</h1>
+  <h3>Web Developer | UI Designer | Information Systems Student</h3>
   
   <p>
-    <a href="https://www.linkedin.com/in/michael-cruz-246b97310/">LinkedIn</a> •
-    <a href="https://github.com/Kuruzukel">GitHub</a> •
-    <a href="mailto:mikasaackerman.jme@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/michael-cruz-246b97310/">
+      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+    </a>
+    <a href="mailto:mikasaackerman.jme@gmail.com">
+      <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+    </a>
+    <a href="https://github.com/Kuruzukel/portfolio">
+      <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="Portfolio">
+    </a>
   </p>
 </div>
 
 ---
+
+## About Me
+
+Motivated web developer and UI designer with expertise in full-stack development, layout design, and office productivity solutions. Currently pursuing a Bachelor of Science in Information Systems at Exact Colleges of Asia.
+
+I specialize in creating responsive, user-friendly web applications using modern technologies. Passionate about clean code, intuitive design, and continuous learning.
 
 ## Overview
 
@@ -25,6 +36,30 @@ This repository contains the source code for my professional portfolio website. 
 - **Smooth Navigation**: Seamless scrolling and intuitive navigation experience
 - **Modern UI**: Glass-morphism design with animated elements and gradient effects
 - **Performance Optimized**: Fast loading times with efficient asset management
+
+## Technical Skills
+
+### Frontend Development
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=flat&logo=vue.js&logoColor=4FC08D)
+![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jquery&logoColor=white)
+
+### Backend Development
+
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white)
+
+### Tools & Technologies
+
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 
 ## Technical Stack
 
@@ -153,6 +188,20 @@ Edit the data arrays in `index.html`:
 - First Contentful Paint: < 1.5s
 - Time to Interactive: < 2.5s
 
+## GitHub Statistics
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Kuruzukel&show_icons=true&theme=radical" alt="GitHub Stats" height="165">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kuruzukel&layout=compact&theme=radical" alt="Top Languages" height="165">
+</div>
+
+## Current Focus
+
+- Building scalable web applications
+- Improving cybersecurity knowledge
+- Contributing to open-source projects
+- Learning advanced React patterns and state management
+
 ## Contributing
 
 This is a personal portfolio project. However, if you find bugs or have suggestions for improvements, feel free to open an issue.
@@ -177,6 +226,8 @@ This project is for portfolio and demonstration purposes. Please do not use the 
 ---
 
 <div align="center">
+  <p><strong>Let's build something amazing together</strong></p>
   <p>Built with dedication and attention to detail</p>
-  <p><strong>Let's collaborate</strong></p>
+  
+  <img src="https://komarev.com/ghpvc/?username=Kuruzukel&color=blueviolet&style=flat-square" alt="Profile Views">
 </div>
