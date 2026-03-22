@@ -1,290 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Michael D. Cruz | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="./images/KEL1.jpg" />
-    <link rel="icon" type="image/jpeg" sizes="16x16" href="./images/KEL1.jpg" />
-    <link rel="apple-touch-icon" href="./images/KEL1.jpg" />
-  </head>
 
-  <body>
-    <div id="root"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael D. Cruz | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/jpeg" sizes="32x32" href="./images/KEL1.jpg" />
+  <link rel="icon" type="image/jpeg" sizes="16x16" href="./images/KEL1.jpg" />
+  <link rel="apple-touch-icon" href="./images/KEL1.jpg" />
+</head>
 
-    <script
-      src="https://unpkg.com/react@18/umd/react.production.min.js"
-      crossorigin
-    ></script>
-    <script
-      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
-      crossorigin
-    ></script>
-    <script>
-      const { useState, useEffect, createElement: e } = React;
+<body>
+  <div id="root"></div>
 
-      const education = [
-        {
-          level: "Bachelor of Science in Information System",
-          school: "Exact Colleges of Asia",
-          details: "College Undergraduate",
-          years: "",
-        },
-        {
-          level: "Senior High School",
-          school: "Camba National High School",
-          details: "",
-          years: "2019 – 2021",
-        },
-        {
-          level: "Junior High School",
-          school: "Camba National High School",
-          details: "",
-          years: "2015  – 2018",
-        },
-        {
-          level: "Elementary",
-          school: "Arayat Holy Child Educational Foundation Inc.",
-          details: "",
-          years: "2008 – 2015",
-        },
-      ];
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script>
+    const { useState, useEffect, createElement: e } = React;
 
-      const experiences = [
-        {
-          title: "Layout Editor & Office Assistant",
-          company: "Creative Aesthetic Academy & Technical Education Inc.",
-          location: "Arayat, Pampanga",
-          years: "2025 – Present",
-          bullets: [
-            "Designed and structured layouts for digital and print materials while ensuring brand consistency and quality.",
-            "Prepared and organized office documents, reports, and presentations using Microsoft Office tools.",
-            "Assisted in administrative tasks and documentation to support daily operations and project coordination.",
-          ],
-        },
-        {
-          title: "Layout Editor & Office Assistant",
-          company: "Labellash & Brows",
-          location: "Arayat, Pampanga",
-          years: "2023 – 2024",
-          bullets: [
-            "Created and edited marketing layouts and printed materials for brand promotions.",
-            "Managed paperwork and office documentation with accuracy and attention to detail.",
-            "Supported administrative duties and contributed to the smooth execution of daily office functions.",
-          ],
-        },
-      ];
+    const education = [
+      {
+        level: "Bachelor of Science in Information System",
+        school: "Exact Colleges of Asia",
+        details: "College Undergraduate",
+        years: "",
+      },
+      {
+        level: "Senior High School",
+        school: "Camba National High School",
+        details: "",
+        years: "2019 – 2021",
+      },
+      {
+        level: "Junior High School",
+        school: "Camba National High School",
+        details: "",
+        years: "2015  – 2018",
+      },
+      {
+        level: "Elementary",
+        school: "Arayat Holy Child Educational Foundation Inc.",
+        details: "",
+        years: "2008 – 2015",
+      },
+    ];
 
-      const skills = [
-        {
-          name: "Web Development",
-          details: [
-            "Develop responsive and dynamic web applications using HTML, CSS, JavaScript, PHP, Laravel, React, Vue, jQuery, Dart, MongoDB, and MySQL.",
-            "Integrate frontend and backend systems for smooth and efficient functionality.",
-            "Apply best practices in code optimization, debugging, and version control.",
-          ],
-        },
-        {
-          name: "Layout & UI Design",
-          details: [
-            "Design clean and user-friendly interfaces that enhance overall usability.",
-            "Ensure layouts follow modern design trends and accessibility standards.",
-            "Utilize design frameworks and tools to improve consistency and aesthetics.",
-          ],
-        },
-        {
-          name: "Video Editing",
-          details: [
-            "Edit and produce multimedia content for digital platforms and presentations.",
-            "Enhance storytelling through transitions, effects, and sound synchronization.",
-            "Optimize videos for various formats and social media use.",
-          ],
-        },
-        {
-          name: "Office Productivity",
-          details: [
-            "Prepare and organize professional documents, reports, and presentations using Microsoft Office.",
-            "Maintain accuracy, formatting consistency, and data organization.",
-            "Support administrative and documentation tasks efficiently.",
-          ],
-        },
-      ];
+    const experiences = [
+      {
+        title: "Layout Editor & Office Assistant",
+        company: "Creative Aesthetic Academy & Technical Education Inc.",
+        location: "Arayat, Pampanga",
+        years: "2025 – Present",
+        bullets: [
+          "Designed and structured layouts for digital and print materials while ensuring brand consistency and quality.",
+          "Prepared and organized office documents, reports, and presentations using Microsoft Office tools.",
+          "Assisted in administrative tasks and documentation to support daily operations and project coordination.",
+        ],
+      },
+      {
+        title: "Layout Editor & Office Assistant",
+        company: "Labellash & Brows",
+        location: "Arayat, Pampanga",
+        years: "2023 – 2024",
+        bullets: [
+          "Created and edited marketing layouts and printed materials for brand promotions.",
+          "Managed paperwork and office documentation with accuracy and attention to detail.",
+          "Supported administrative duties and contributed to the smooth execution of daily office functions.",
+        ],
+      },
+    ];
 
-      const navLinks = [
-        { label: "About", href: "#about" },
-        { label: "Skills", href: "#skills" },
-        { label: "Education", href: "#education" },
-        { label: "Experience", href: "#experience" },
-        { label: "Certificates", href: "#certificates" },
-        { label: "Contacts", href: "#contacts" },
-      ];
+    const skills = [
+      {
+        name: "Web Development",
+        details: [
+          "Develop responsive and dynamic web applications using HTML, CSS, JavaScript, PHP, Laravel, React, Vue, jQuery, Dart, MongoDB, and MySQL.",
+          "Integrate frontend and backend systems for smooth and efficient functionality.",
+          "Apply best practices in code optimization, debugging, and version control.",
+        ],
+      },
+      {
+        name: "Layout & UI Design",
+        details: [
+          "Design clean and user-friendly interfaces that enhance overall usability.",
+          "Ensure layouts follow modern design trends and accessibility standards.",
+          "Utilize design frameworks and tools to improve consistency and aesthetics.",
+        ],
+      },
+      {
+        name: "Video Editing",
+        details: [
+          "Edit and produce multimedia content for digital platforms and presentations.",
+          "Enhance storytelling through transitions, effects, and sound synchronization.",
+          "Optimize videos for various formats and social media use.",
+        ],
+      },
+      {
+        name: "Office Productivity",
+        details: [
+          "Prepare and organize professional documents, reports, and presentations using Microsoft Office.",
+          "Maintain accuracy, formatting consistency, and data organization.",
+          "Support administrative and documentation tasks efficiently.",
+        ],
+      },
+    ];
 
-      const App = () => {
-        const [theme, setTheme] = useState("light");
-        const [menuOpen, setMenuOpen] = useState(false);
-        const [topbarVisible, setTopbarVisible] = useState(true);
+    const navLinks = [
+      { label: "About", href: "#about" },
+      { label: "Skills", href: "#skills" },
+      { label: "Education", href: "#education" },
+      { label: "Experience", href: "#experience" },
+      { label: "Certificates", href: "#certificates" },
+      { label: "Contacts", href: "#contacts" },
+    ];
 
-        useEffect(() => {
-          document.body.dataset.theme = theme;
-        }, [theme]);
+    const App = () => {
+      const [theme, setTheme] = useState("light");
+      const [menuOpen, setMenuOpen] = useState(false);
+      const [topbarVisible, setTopbarVisible] = useState(true);
 
-        useEffect(() => {
-          const closeMenuOnResize = () => {
-            if (window.innerWidth > 768) {
-              setMenuOpen(false);
-            }
-          };
+      useEffect(() => {
+        document.body.dataset.theme = theme;
+      }, [theme]);
 
-          window.addEventListener("resize", closeMenuOnResize);
-          return () => window.removeEventListener("resize", closeMenuOnResize);
-        }, []);
-
-        useEffect(() => {
-          let lastScrollY = window.scrollY;
-          let ticking = false;
-
-          const handleScroll = () => {
-            if (!ticking) {
-              requestAnimationFrame(() => {
-                const currentScrollY = window.scrollY;
-
-                // Show topbar when scrolling up or at the top
-                if (currentScrollY < lastScrollY || currentScrollY < 100) {
-                  setTopbarVisible(true);
-                }
-                // Hide topbar when scrolling down (after 100px)
-                else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                  setTopbarVisible(false);
-                  setMenuOpen(false); // Close mobile menu when hiding topbar
-                }
-
-                lastScrollY = currentScrollY;
-                ticking = false;
-              });
-              ticking = true;
-            }
-          };
-
-          window.addEventListener("scroll", handleScroll, { passive: true });
-          return () => window.removeEventListener("scroll", handleScroll);
-        }, []);
-
-        const toggleTheme = () => {
-          setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+      useEffect(() => {
+        const closeMenuOnResize = () => {
+          if (window.innerWidth > 768) {
+            setMenuOpen(false);
+          }
         };
 
-        return e(
-          "div",
-          { className: `page${menuOpen ? " nav-open" : ""}` },
-          e("div", { className: "grid-overlay" }),
-          e("div", { className: "orb orb-1" }),
-          e("div", { className: "orb orb-2" }),
-          e("div", { className: "orb orb-3" }),
-          e(
-            "header",
-            {
-              className: `topbar glass-panel${topbarVisible ? "" : " hidden"}`,
-            },
-            e("div", { className: "portfolio-title" }, "Kel's Portfolio"),
-            e(
-              "nav",
-              { className: "nav-desktop" },
-              ...navLinks.map((link) =>
-                e(
-                  "a",
-                  {
-                    key: link.label,
-                    href: link.href,
-                    onClick: (e) => {
-                      e.preventDefault();
-                      const target = document.querySelector(link.href);
-                      if (target) {
-                        target.scrollIntoView({
-                          behavior: "smooth",
-                          block: "start",
-                        });
-                      }
-                    },
-                  },
-                  link.label
-                )
-              )
-            ),
-            e(
-              "div",
-              { className: "topbar-actions" },
-              e(
-                "button",
-                {
-                  className: "theme-toggle",
-                  type: "button",
-                  onClick: toggleTheme,
-                  "aria-label": "Toggle color mode",
-                },
-                e(
-                  "svg",
-                  {
-                    className: "icon icon-light",
-                    width: "22",
-                    height: "22",
-                    viewBox: "0 0 24 24",
-                    "aria-hidden": "true",
-                  },
-                  e("circle", {
-                    cx: "12",
-                    cy: "12",
-                    r: "4",
-                    fill: "currentColor",
-                  }),
-                  e("path", {
-                    d: "M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41",
-                    stroke: "currentColor",
-                    strokeWidth: "2",
-                    strokeLinecap: "round",
-                  })
-                ),
-                e(
-                  "svg",
-                  {
-                    className: "icon icon-dark",
-                    width: "22",
-                    height: "22",
-                    viewBox: "0 0 24 24",
-                    "aria-hidden": "true",
-                  },
-                  e("path", {
-                    d: "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z",
-                    fill: "currentColor",
-                  })
-                ),
-                e("span", { className: "sr-only" }, "Toggle color mode")
-              ),
-              e(
-                "button",
-                {
-                  className: `hamburger${menuOpen ? " active" : ""}`,
-                  type: "button",
-                  "aria-label": "Toggle navigation",
-                  "aria-expanded": menuOpen,
-                  onClick: () => setMenuOpen((open) => !open),
-                },
-                e("span"),
-                e("span"),
-                e("span")
-              )
-            )
-          ),
+        window.addEventListener("resize", closeMenuOnResize);
+        return () => window.removeEventListener("resize", closeMenuOnResize);
+      }, []);
 
+      useEffect(() => {
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        const handleScroll = () => {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              const currentScrollY = window.scrollY;
+
+              // Show topbar when scrolling up or at the top
+              if (currentScrollY < lastScrollY || currentScrollY < 100) {
+                setTopbarVisible(true);
+              }
+              // Hide topbar when scrolling down (after 100px)
+              else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                setTopbarVisible(false);
+                setMenuOpen(false); // Close mobile menu when hiding topbar
+              }
+
+              lastScrollY = currentScrollY;
+              ticking = false;
+            });
+            ticking = true;
+          }
+        };
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
+
+      const toggleTheme = () => {
+        setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+      };
+
+      return e(
+        "div",
+        { className: `page${menuOpen ? " nav-open" : ""}` },
+        e("div", { className: "grid-overlay" }),
+        e("div", { className: "orb orb-1" }),
+        e("div", { className: "orb orb-2" }),
+        e("div", { className: "orb orb-3" }),
+        e(
+          "header",
+          {
+            className: `topbar glass-panel${topbarVisible ? "" : " hidden"}`,
+          },
+          e("div", { className: "portfolio-title" }, "Kel's Portfolio"),
           e(
             "nav",
-            { className: `nav${menuOpen ? " open" : ""}` },
+            { className: "nav-desktop" },
             ...navLinks.map((link) =>
               e(
                 "a",
@@ -300,423 +204,533 @@
                         block: "start",
                       });
                     }
-                    setMenuOpen(false);
                   },
                 },
                 link.label
               )
             )
           ),
+          e(
+            "div",
+            { className: "topbar-actions" },
+            e(
+              "button",
+              {
+                className: "theme-toggle",
+                type: "button",
+                onClick: toggleTheme,
+                "aria-label": "Toggle color mode",
+              },
+              e(
+                "svg",
+                {
+                  className: "icon icon-light",
+                  width: "22",
+                  height: "22",
+                  viewBox: "0 0 24 24",
+                  "aria-hidden": "true",
+                },
+                e("circle", {
+                  cx: "12",
+                  cy: "12",
+                  r: "4",
+                  fill: "currentColor",
+                }),
+                e("path", {
+                  d: "M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41",
+                  stroke: "currentColor",
+                  strokeWidth: "2",
+                  strokeLinecap: "round",
+                })
+              ),
+              e(
+                "svg",
+                {
+                  className: "icon icon-dark",
+                  width: "22",
+                  height: "22",
+                  viewBox: "0 0 24 24",
+                  "aria-hidden": "true",
+                },
+                e("path", {
+                  d: "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z",
+                  fill: "currentColor",
+                })
+              ),
+              e("span", { className: "sr-only" }, "Toggle color mode")
+            ),
+            e(
+              "button",
+              {
+                className: `hamburger${menuOpen ? " active" : ""}`,
+                type: "button",
+                "aria-label": "Toggle navigation",
+                "aria-expanded": menuOpen,
+                onClick: () => setMenuOpen((open) => !open),
+              },
+              e("span"),
+              e("span"),
+              e("span")
+            )
+          )
+        ),
+
+        e(
+          "nav",
+          { className: `nav${menuOpen ? " open" : ""}` },
+          ...navLinks.map((link) =>
+            e(
+              "a",
+              {
+                key: link.label,
+                href: link.href,
+                onClick: (e) => {
+                  e.preventDefault();
+                  const target = document.querySelector(link.href);
+                  if (target) {
+                    target.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }
+                  setMenuOpen(false);
+                },
+              },
+              link.label
+            )
+          )
+        ),
+
+        e(
+          "main",
+          { className: "shell" },
+          e(
+            "section",
+            { id: "about", className: "hero glass-panel" },
+            e(
+              "div",
+              { className: "avatar-frame" },
+              e("span", { className: "pulse" }),
+              e("img", { src: "./images/KEL1.jpg", alt: "Michael D. Cruz" })
+            ),
+            e(
+              "div",
+              { className: "hero-text" },
+              e(
+                "div",
+                { className: "hero-heading" },
+                e("h1", null, "Michael D. Cruz"),
+                e(
+                  "a",
+                  {
+                    className: "btn view-cv",
+                    href: "CV/CruzKelCVPortfolio.pdf",
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  },
+                  "View CV"
+                )
+              ),
+              e(
+                "p",
+                { className: "summary" },
+                "Motivated and hardworking individual with skills in Web Development, Layout and UI Design, Video Editing, and Office Productivity. Dedicated to producing high-quality work through teamwork, effective problem solving, and continuous learning. Committed to improving skills and contributing to the success of every project."
+              )
+            )
+          ),
 
           e(
-            "main",
-            { className: "shell" },
+            "section",
+            { id: "skills", className: "glass-panel spotlight" },
             e(
-              "section",
-              { id: "about", className: "hero glass-panel" },
-              e(
-                "div",
-                { className: "avatar-frame" },
-                e("span", { className: "pulse" }),
-                e("img", { src: "./images/KEL1.jpg", alt: "Michael D. Cruz" })
-              ),
-              e(
-                "div",
-                { className: "hero-text" },
-                e(
-                  "div",
-                  { className: "hero-heading" },
-                  e("h1", null, "Michael D. Cruz"),
-                  e(
-                    "a",
-                    {
-                      className: "btn view-cv",
-                      href: "CV/CruzKelCVPortfolio.pdf",
-                      target: "_blank",
-                      rel: "noopener noreferrer",
-                    },
-                    "View CV"
-                  )
-                ),
-                e(
-                  "p",
-                  { className: "summary" },
-                  "Motivated and hardworking individual with skills in Web Development, Layout and UI Design, Video Editing, and Office Productivity. Dedicated to producing high-quality work through teamwork, effective problem solving, and continuous learning. Committed to improving skills and contributing to the success of every project."
-                )
-              )
+              "div",
+              { className: "section-title" },
+              e("span", { className: "dot" }),
+              e("h2", null, "Technical Skills")
             ),
-
             e(
-              "section",
-              { id: "skills", className: "glass-panel spotlight" },
-              e(
-                "div",
-                { className: "section-title" },
-                e("span", { className: "dot" }),
-                e("h2", null, "Technical Skills")
-              ),
-              e(
-                "div",
-                { className: "cards-grid" },
-                ...skills.map((skill) =>
-                  e(
-                    "article",
-                    { key: skill.name, className: "skill-card" },
-                    e("h3", null, skill.name),
-                    e(
-                      "ul",
-                      null,
-                      ...skill.details.map((item, index) =>
-                        e("li", { key: index }, item)
-                      )
-                    )
-                  )
-                )
-              )
-            ),
-
-            e(
-              "section",
-              { id: "education", className: "glass-panel" },
-              e(
-                "div",
-                { className: "section-title" },
-                e("span", { className: "dot" }),
-                e("h2", null, "Education")
-              ),
-              e(
-                "div",
-                { className: "timeline" },
-                ...education.map((item, index) =>
-                  e(
-                    "div",
-                    { key: index, className: "timeline-item" },
-                    e("div", { className: "timeline-marker" }),
-                    e(
-                      "div",
-                      { className: "timeline-content" },
-                      e("h3", null, item.level),
-                      item.school &&
-                        e("p", { className: "institution" }, item.school),
-                      item.details &&
-                        item.details !== "" &&
-                        e("p", { className: "details" }, item.details),
-                      item.years && e("p", { className: "years" }, item.years)
-                    )
-                  )
-                )
-              )
-            ),
-
-            e(
-              "section",
-              { id: "experience", className: "glass-panel" },
-              e(
-                "div",
-                { className: "section-title" },
-                e("span", { className: "dot" }),
-                e("h2", null, "Work Experience")
-              ),
-              e(
-                "div",
-                { className: "experience-list" },
-                ...experiences.map((role) =>
-                  e(
-                    "article",
-                    { key: role.company, className: "experience-card" },
-                    e(
-                      "header",
-                      null,
-                      e("h3", null, role.title),
-                      e(
-                        "p",
-                        { className: "meta" },
-                        `${role.company} — ${role.location}`
-                      ),
-                      e("p", { className: "years" }, role.years)
-                    ),
-                    e(
-                      "ul",
-                      null,
-                      ...role.bullets.map((item, index) =>
-                        e("li", { key: index }, item)
-                      )
-                    )
-                  )
-                )
-              )
-            ),
-
-            e(
-              "section",
-              { id: "certificates", className: "glass-panel" },
-              e(
-                "div",
-                { className: "section-title" },
-                e("span", { className: "dot" }),
-                e("h2", null, "Certificates & Achievements")
-              ),
-              e(
-                "div",
-                { className: "certificates-grid" },
+              "div",
+              { className: "cards-grid" },
+              ...skills.map((skill) =>
                 e(
-                  "div",
-                  { className: "certificate-item" },
-                  e("h2", null, "Introduction to Cybersecurity"),
-                  e("img", {
-                    src: "./images/CruzMichael_ICS.png",
-                    alt: "Introduction to Cybersecurity Certificate",
-                    className: "certificate-image",
-                  })
-                ),
-                e(
-                  "div",
-                  { className: "certificate-item" },
-                  e("h2", null, "Hour of Code"),
-                  e("img", {
-                    src: "./images/CruzMichael_MC.png",
-                    alt: "Hour of Code Certificate",
-                    className: "certificate-image",
-                  })
-                ),
-                e(
-                  "div",
-                  { className: "certificate-item" },
+                  "article",
+                  { key: skill.name, className: "skill-card" },
+                  e("h3", null, skill.name),
                   e(
-                    "h2",
+                    "ul",
                     null,
-                    "Tech Internships Decoded: Your Pathway to Industry Success"
-                  ),
-                  e("img", {
-                    src: "./images/CruzMichael_TechInternshipsDecoded.jpg",
-                    alt: "Tech Internships Decoded Certificate",
-                    className: "certificate-image",
-                  })
-                ),
-                e(
-                  "div",
-                  { className: "certificate-item" },
-                  e("h2", null, "IS Talk 2.0: Stories of Rise and Reach"),
-                  e("img", {
-                    src: "./images/CruzMichael_ISTalk.jpg",
-                    alt: "IS Talk 2.0 Certificate",
-                    className: "certificate-image",
-                  })
-                ),
-                e(
-                  "div",
-                  { className: "certificate-item" },
-                  e(
-                    "h2",
-                    null,
-                    "Technovation: Business and Technology Synergies"
-                  ),
-                  e("img", {
-                    src: "./images/CruzMichael_Technovation.jpg",
-                    alt: "Technovation Certificate",
-                    className: "certificate-image",
-                  })
-                ),
-                e(
-                  "div",
-                  { className: "certificate-item" },
-                  e("h2", null, "Introduction to Cybersecurity Badge"),
-                  e("img", {
-                    src: "./images/IntoductiontoCybersecurityBadge.png",
-                    alt: "Introduction to Cybersecurity Badge",
-                    className: "certificate-image",
-                  })
+                    ...skill.details.map((item, index) =>
+                      e("li", { key: index }, item)
+                    )
+                  )
                 )
               )
             )
           ),
 
           e(
-            "footer",
-            { id: "contacts", className: "footer glass-panel" },
+            "section",
+            { id: "education", className: "glass-panel" },
             e(
               "div",
-              { className: "footer-content" },
-              e(
-                "div",
-                { className: "footer-info" },
+              { className: "section-title" },
+              e("span", { className: "dot" }),
+              e("h2", null, "Education")
+            ),
+            e(
+              "div",
+              { className: "timeline" },
+              ...education.map((item, index) =>
                 e(
                   "div",
-                  { className: "footer-contact" },
+                  { key: index, className: "timeline-item" },
+                  e("div", { className: "timeline-marker" }),
                   e(
-                    "span",
-                    null,
-                    e(
-                      "svg",
-                      {
-                        width: "16",
-                        height: "16",
-                        viewBox: "0 0 24 24",
-                        fill: "currentColor",
-                        style: {
-                          marginRight: "0.5rem",
-                          verticalAlign: "middle",
-                        },
-                      },
-                      e("path", {
-                        d: "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z",
-                      })
-                    ),
-                    "mikasaackerman.jme@gmail.com"
-                  ),
-                  e(
-                    "span",
-                    null,
-                    e(
-                      "svg",
-                      {
-                        width: "16",
-                        height: "16",
-                        viewBox: "0 0 24 24",
-                        fill: "currentColor",
-                        style: {
-                          marginRight: "0.5rem",
-                          verticalAlign: "middle",
-                        },
-                      },
-                      e("path", {
-                        d: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z",
-                      })
-                    ),
-                    "Suclayin, Arayat, Pampanga"
-                  ),
-                  e(
-                    "span",
-                    null,
-                    e(
-                      "svg",
-                      {
-                        width: "16",
-                        height: "16",
-                        viewBox: "0 0 24 24",
-                        fill: "currentColor",
-                        style: {
-                          marginRight: "0.5rem",
-                          verticalAlign: "middle",
-                        },
-                      },
-                      e("path", {
-                        d: "M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C11.85 22 2 12.15 2 0a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z",
-                      })
-                    ),
-                    "0938 819 3932"
-                  ),
-                  e(
-                    "span",
-                    null,
-                    e(
-                      "a",
-                      {
-                        href: "https://www.facebook.com/Kuromisha.3/",
-                        target: "_blank",
-                        rel: "noopener noreferrer",
-                        style: {
-                          color: "inherit",
-                          textDecoration: "none",
-                          display: "inline-flex",
-                          alignItems: "center",
-                          gap: "0.5rem",
-                        },
-                      },
-                      e(
-                        "svg",
-                        {
-                          width: "16",
-                          height: "16",
-                          viewBox: "0 0 24 24",
-                          fill: "currentColor",
-                        },
-                        e("path", {
-                          d: "M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99h-2.54V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99C18.34 21.13 22 16.99 22 12z",
-                        })
-                      ),
-                      "Cruz Kel"
-                    )
-                  ),
-                  e(
-                    "span",
-                    null,
-                    e(
-                      "a",
-                      {
-                        href: "https://www.linkedin.com/in/michael-cruz-246b97310/",
-                        target: "_blank",
-                        rel: "noopener noreferrer",
-                        style: { color: "inherit", textDecoration: "none" },
-                      },
-                      e(
-                        "svg",
-                        {
-                          width: "16",
-                          height: "16",
-                          viewBox: "0 0 24 24",
-                          fill: "currentColor",
-                          style: {
-                            marginRight: "0.5rem",
-                            verticalAlign: "middle",
-                          },
-                        },
-                        e("path", {
-                          d: "M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5C1.11 6 0 4.88 0 3.5S1.11 1 2.5 1 5 2.12 5 3.5zM.2 8.5h4.6V24H.2zM8.98 8.5h4.4v2.1h.06c.61-1.16 2.1-2.38 4.33-2.38 4.64 0 5.5 3.05 5.5 7V24h-4.6v-6.9c0-1.64-.03-3.74-2.28-3.74-2.28 0-2.63 1.78-2.63 3.62V24h-4.6z",
-                        })
-                      ),
-                      "Michael Cruz"
-                    )
-                  ),
-                  e(
-                    "span",
-                    null,
-                    e(
-                      "a",
-                      {
-                        href: "https://github.com/Kuruzukel",
-                        target: "_blank",
-                        rel: "noopener noreferrer",
-                        style: { color: "inherit", textDecoration: "none" },
-                      },
-                      e(
-                        "svg",
-                        {
-                          width: "16",
-                          height: "16",
-                          viewBox: "0 0 24 24",
-                          fill: "currentColor",
-                          style: {
-                            marginRight: "0.5rem",
-                            verticalAlign: "middle",
-                          },
-                        },
-                        e("path", {
-                          d: "M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58 0-.29-.01-1.04-.02-2.04-3.34.73-4.05-1.61-4.05-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.97 0-1.32.47-2.39 1.24-3.23-.12-.3-.54-1.51.12-3.15 0 0 1.01-.32 3.3 1.23a11.44 11.44 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.64.24 2.85.12 3.15.77.84 1.24 1.91 1.24 3.23 0 4.64-2.81 5.67-5.49 5.97.43.37.82 1.1.82 2.21 0 1.6-.01 2.88-.01 3.27 0 .32.2.7.8.58C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z",
-                        })
-                      ),
-                      "Kuruzukel"
-                    )
+                    "div",
+                    { className: "timeline-content" },
+                    e("h3", null, item.level),
+                    item.school &&
+                    e("p", { className: "institution" }, item.school),
+                    item.details &&
+                    item.details !== "" &&
+                    e("p", { className: "details" }, item.details),
+                    item.years && e("p", { className: "years" }, item.years)
                   )
-                ),
-                e(
-                  "div",
-                  { className: "footer-copyright" },
-                  e(
-                    "p",
-                    null,
-                    `© ${new Date().getFullYear()} Michael D. Cruz.`
-                  ),
-                  "Let's collaborate"
                 )
               )
             )
-          )
-        );
-      };
+          ),
 
-      const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render(e(App));
-    </script>
-  </body>
+          e(
+            "section",
+            { id: "experience", className: "glass-panel" },
+            e(
+              "div",
+              { className: "section-title" },
+              e("span", { className: "dot" }),
+              e("h2", null, "Work Experience")
+            ),
+            e(
+              "div",
+              { className: "experience-list" },
+              ...experiences.map((role) =>
+                e(
+                  "article",
+                  { key: role.company, className: "experience-card" },
+                  e(
+                    "header",
+                    null,
+                    e("h3", null, role.title),
+                    e(
+                      "p",
+                      { className: "meta" },
+                      `${role.company} — ${role.location}`
+                    ),
+                    e("p", { className: "years" }, role.years)
+                  ),
+                  e(
+                    "ul",
+                    null,
+                    ...role.bullets.map((item, index) =>
+                      e("li", { key: index }, item)
+                    )
+                  )
+                )
+              )
+            )
+          ),
+
+          e(
+            "section",
+            { id: "certificates", className: "glass-panel" },
+            e(
+              "div",
+              { className: "section-title" },
+              e("span", { className: "dot" }),
+              e("h2", null, "Certificates & Achievements")
+            ),
+            e(
+              "div",
+              { className: "certificates-grid" },
+              e(
+                "div",
+                { className: "certificate-item" },
+                e("h2", null, "Introduction to Cybersecurity"),
+                e("img", {
+                  src: "./images/CruzMichael_ICS.png",
+                  alt: "Introduction to Cybersecurity Certificate",
+                  className: "certificate-image",
+                })
+              ),
+              e(
+                "div",
+                { className: "certificate-item" },
+                e("h2", null, "Linux for Cybersecurity"),
+                e("img", {
+                  src: "./images/LinuxForCyberSecurityCruzKel.png",
+                  alt: "Linux for Cybersecurity Certificate",
+                  className: "certificate-image",
+                })
+              ),
+              e(
+                "div",
+                { className: "certificate-item" },
+                e("h2", null, "Hour of Code"),
+                e("img", {
+                  src: "./images/CruzMichael_MC.png",
+                  alt: "Hour of Code Certificate",
+                  className: "certificate-image",
+                })
+              ),
+              e(
+                "div",
+                { className: "certificate-item" },
+                e(
+                  "h2",
+                  null,
+                  "Tech Internships Decoded: Your Pathway to Industry Success"
+                ),
+                e("img", {
+                  src: "./images/CruzMichael_TechInternshipsDecoded.jpg",
+                  alt: "Tech Internships Decoded Certificate",
+                  className: "certificate-image",
+                })
+              ),
+              e(
+                "div",
+                { className: "certificate-item" },
+                e("h2", null, "IS Talk 2.0: Stories of Rise and Reach"),
+                e("img", {
+                  src: "./images/CruzMichael_ISTalk.jpg",
+                  alt: "IS Talk 2.0 Certificate",
+                  className: "certificate-image",
+                })
+              ),
+              e(
+                "div",
+                { className: "certificate-item" },
+                e(
+                  "h2",
+                  null,
+                  "Technovation: Business and Technology Synergies"
+                ),
+                e("img", {
+                  src: "./images/CruzMichael_Technovation.jpg",
+                  alt: "Technovation Certificate",
+                  className: "certificate-image",
+                })
+              ),
+              e(
+                "div",
+                { className: "certificate-item" },
+                e("h2", null, "Introduction to Cybersecurity Badge"),
+                e("img", {
+                  src: "./images/IntoductiontoCybersecurityBadge.png",
+                  alt: "Introduction to Cybersecurity Badge",
+                  className: "certificate-image",
+                })
+              ),
+              e(
+                "div",
+                { className: "certificate-item" },
+                e("h2", null, "Linux for Cybersecurity Badge"),
+                e("img", {
+                  src: "./images/LinuxforCybersecurityCruzKelBadge.png",
+                  alt: "Linux for Cybersecurity Badge",
+                  className: "certificate-image",
+                })
+              )
+            )
+          )
+        ),
+
+        e(
+          "footer",
+          { id: "contacts", className: "footer glass-panel" },
+          e(
+            "div",
+            { className: "footer-content" },
+            e(
+              "div",
+              { className: "footer-info" },
+              e(
+                "div",
+                { className: "footer-contact" },
+                e(
+                  "span",
+                  null,
+                  e(
+                    "svg",
+                    {
+                      width: "16",
+                      height: "16",
+                      viewBox: "0 0 24 24",
+                      fill: "currentColor",
+                      style: {
+                        marginRight: "0.5rem",
+                        verticalAlign: "middle",
+                      },
+                    },
+                    e("path", {
+                      d: "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z",
+                    })
+                  ),
+                  "mikasaackerman.jme@gmail.com"
+                ),
+                e(
+                  "span",
+                  null,
+                  e(
+                    "svg",
+                    {
+                      width: "16",
+                      height: "16",
+                      viewBox: "0 0 24 24",
+                      fill: "currentColor",
+                      style: {
+                        marginRight: "0.5rem",
+                        verticalAlign: "middle",
+                      },
+                    },
+                    e("path", {
+                      d: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z",
+                    })
+                  ),
+                  "Suclayin, Arayat, Pampanga"
+                ),
+                e(
+                  "span",
+                  null,
+                  e(
+                    "svg",
+                    {
+                      width: "16",
+                      height: "16",
+                      viewBox: "0 0 24 24",
+                      fill: "currentColor",
+                      style: {
+                        marginRight: "0.5rem",
+                        verticalAlign: "middle",
+                      },
+                    },
+                    e("path", {
+                      d: "M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C11.85 22 2 12.15 2 0a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z",
+                    })
+                  ),
+                  "0938 819 3932"
+                ),
+                e(
+                  "span",
+                  null,
+                  e(
+                    "a",
+                    {
+                      href: "https://www.facebook.com/Kuromisha.3/",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      style: {
+                        color: "inherit",
+                        textDecoration: "none",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "0.5rem",
+                      },
+                    },
+                    e(
+                      "svg",
+                      {
+                        width: "16",
+                        height: "16",
+                        viewBox: "0 0 24 24",
+                        fill: "currentColor",
+                      },
+                      e("path", {
+                        d: "M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99h-2.54V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99C18.34 21.13 22 16.99 22 12z",
+                      })
+                    ),
+                    "Cruz Kel"
+                  )
+                ),
+                e(
+                  "span",
+                  null,
+                  e(
+                    "a",
+                    {
+                      href: "https://www.linkedin.com/in/michael-cruz-246b97310/",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      style: { color: "inherit", textDecoration: "none" },
+                    },
+                    e(
+                      "svg",
+                      {
+                        width: "16",
+                        height: "16",
+                        viewBox: "0 0 24 24",
+                        fill: "currentColor",
+                        style: {
+                          marginRight: "0.5rem",
+                          verticalAlign: "middle",
+                        },
+                      },
+                      e("path", {
+                        d: "M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5C1.11 6 0 4.88 0 3.5S1.11 1 2.5 1 5 2.12 5 3.5zM.2 8.5h4.6V24H.2zM8.98 8.5h4.4v2.1h.06c.61-1.16 2.1-2.38 4.33-2.38 4.64 0 5.5 3.05 5.5 7V24h-4.6v-6.9c0-1.64-.03-3.74-2.28-3.74-2.28 0-2.63 1.78-2.63 3.62V24h-4.6z",
+                      })
+                    ),
+                    "Michael Cruz"
+                  )
+                ),
+                e(
+                  "span",
+                  null,
+                  e(
+                    "a",
+                    {
+                      href: "https://github.com/Kuruzukel",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      style: { color: "inherit", textDecoration: "none" },
+                    },
+                    e(
+                      "svg",
+                      {
+                        width: "16",
+                        height: "16",
+                        viewBox: "0 0 24 24",
+                        fill: "currentColor",
+                        style: {
+                          marginRight: "0.5rem",
+                          verticalAlign: "middle",
+                        },
+                      },
+                      e("path", {
+                        d: "M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58 0-.29-.01-1.04-.02-2.04-3.34.73-4.05-1.61-4.05-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.97 0-1.32.47-2.39 1.24-3.23-.12-.3-.54-1.51.12-3.15 0 0 1.01-.32 3.3 1.23a11.44 11.44 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.64.24 2.85.12 3.15.77.84 1.24 1.91 1.24 3.23 0 4.64-2.81 5.67-5.49 5.97.43.37.82 1.1.82 2.21 0 1.6-.01 2.88-.01 3.27 0 .32.2.7.8.58C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z",
+                      })
+                    ),
+                    "Kuruzukel"
+                  )
+                )
+              ),
+              e(
+                "div",
+                { className: "footer-copyright" },
+                e(
+                  "p",
+                  null,
+                  `© ${new Date().getFullYear()} Michael D. Cruz.`
+                ),
+                "Let's collaborate"
+              )
+            )
+          )
+        )
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(e(App));
+  </script>
+</body>
+
 </html>
