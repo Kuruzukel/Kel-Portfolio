@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="./images/KEL1.jpg" alt="Michael D. Cruz" width="150" style="border-radius: 50%;">
-  
-  <h1>Michael D. Cruz</h1>
+  <h1>Kel's Portfolio</h1>
   <h3>Web Developer | UI Designer | Information Systems Student</h3>
+  
+  <p><em>A modern, responsive portfolio website showcasing web development skills, professional experience, and technical expertise through an elegant glass-morphism design with dynamic theming.</em></p>
   
   <p>
     <a href="https://www.linkedin.com/in/michael-cruz-246b97310/">
@@ -21,9 +21,7 @@
 
 ## About Me
 
-Motivated web developer and UI designer with expertise in full-stack development, layout design, and office productivity solutions. Currently pursuing a Bachelor of Science in Information Systems at Exact Colleges of Asia.
-
-I specialize in creating responsive, user-friendly web applications using modern technologies. Passionate about clean code, intuitive design, and continuous learning.
+Web developer and UI designer specializing in full-stack development and modern interface design. Currently pursuing a Bachelor of Science in Information Systems at Exact Colleges of Asia, with hands-on experience in creating responsive web applications and professional layouts. Focused on delivering clean, efficient code and user-centered design solutions.
 
 ## Overview
 
